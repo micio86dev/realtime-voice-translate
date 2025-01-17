@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "bun run dist/index.js",
     "start": "bun run ./api/index.ts",
-    "build": "bun-vercel ./api/index.ts"
+    "build": "bun-vercel ./api/index.ts",
+    "deploy": "vercel deploy --prebuilt --prod"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
