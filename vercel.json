@@ -4,10 +4,10 @@
       "runtime": "nodejs14.x"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/dist/"
+      "source": "/(.*)",
+      "destination": "/dist"
     }
   ]
 }
