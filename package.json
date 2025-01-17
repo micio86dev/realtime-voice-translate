@@ -2,7 +2,8 @@
   "name": "realtime-voice-translate",
   "version": "1.0.0",
   "scripts": {
-    "start": "bun run api/server.ts"
+    "start": "bun run index.ts",
+    "build": "bun build index.ts --outdir dist"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
