@@ -1,13 +1,3 @@
 {
-  "functions": {
-    "./index.js": {
-      "runtime": "nodejs14.x"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/dist"
-    }
-  ]
+  "buildCommand": "bun run build"
 }
