@@ -1,5 +1,5 @@
 import { Elysia } from 'elysia';
-// import { cors } from '@elysiajs/cors';
+import { cors } from '@elysiajs/cors';
 import axios from 'axios';
 import Pusher from 'pusher';
 
@@ -22,7 +22,7 @@ interface SendMessageBody {
   message: string;
 }
 
-// app.use(cors());
+app.use(cors());
 app.post('/send-message', async (ctx) => {
   const { channel, source_lang, target_lang, message } = ctx.body as SendMessageBody;
 
