@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "bun run --watch api/index.ts",
-    "start": "bun run api/index.ts"
+    "start": "bun run api/index.ts",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./api/index.ts"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
@@ -15,6 +16,5 @@
   "devDependencies": {
     "typescript": "^5.7.3",
     "bun-types": "latest"
-  },
-  "module": "api/index.js"
+  }
 }
