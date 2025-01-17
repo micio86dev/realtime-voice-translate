@@ -10,5 +10,8 @@
     "bun-types": "^1.0.0",
     "elysia": "^1.2.10",
     "pusher": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }
