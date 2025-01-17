@@ -2,7 +2,7 @@
   "name": "realtime-voice-translate",
   "version": "1.0.0",
   "scripts": {
-    "start": "bun run index.ts",
+    "start": "bun run dist/index.js",
     "build": "bun build index.ts --outdir dist"
   },
   "dependencies": {
