@@ -3,5 +3,17 @@
     "./index.ts": {
       "runtime": "nodejs14.x"
     }
-  }
+  },
+  "builds": [
+    {
+      "src": "./dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/"
+    }
+  ]
 }
