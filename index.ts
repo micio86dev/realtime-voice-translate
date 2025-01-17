@@ -46,4 +46,4 @@ app.route('POST', '/send-message', async ({ body }: { body: SendMessageBody }) =
   }
 });
 
-app.listen(3000);
+export default app
