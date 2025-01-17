@@ -2,8 +2,10 @@
   "name": "realtime-voice-translate",
   "version": "1.0.0",
   "scripts": {
-    "start": "bun run dist/index.js",
-    "build": "bun-vercel ./index.ts"
+    "dev": "bun run dist/index.js",
+    "start": "bun run ./api/index.ts",
+    "build-vercel": "bun-vercel ./api/index.ts",
+    "build": "bun build ./api/index.ts --outdir ./dist"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
