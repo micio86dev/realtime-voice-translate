@@ -1,8 +1,3 @@
 {
-  "functions": {
-    "api/*.ts": {
-      "runtime": "now-php@1.0.0"
-    }
-  },
   "buildCommand": "bun run build"
 }
