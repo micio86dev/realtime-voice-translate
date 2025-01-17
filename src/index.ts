@@ -12,7 +12,7 @@ const pusher = new Pusher({
 
 const app = new Elysia();
 
-const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
+const DEEPL_API_KEY = process.env.DEEPL_API_KEY ?? '25a13b49-bc98-43d1-b7f3-4ca7f8b7da74:fx';
 const DEEPL_BASE_URL = 'https://api-free.deepl.com/v2/translate';
 
 interface SendMessageBody {
