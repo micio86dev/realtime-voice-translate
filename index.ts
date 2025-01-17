@@ -22,8 +22,8 @@ interface SendMessageBody {
   message: string;
 }
 
-app.use(cors());
-app.route('POST', '/send-message', async ({ body }: { body: SendMessageBody }) => {
+// app.use(cors());
+app.post('/send-message', async ({ body }: { body: SendMessageBody }) => {
   const { channel, source_lang, target_lang, message } = body;
 
   try {
