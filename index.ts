@@ -47,4 +47,6 @@ app.post('/send-message', async (ctx) => {
   }
 });
 
+app.listen(3000);
+
 export default app
