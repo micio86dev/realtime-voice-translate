@@ -47,4 +47,4 @@ app.post('/send-message', async (ctx) => {
   }
 });
 
-export default app.fetch
+export default app.handle

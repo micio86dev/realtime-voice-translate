@@ -1,8 +1,7 @@
 {
   "functions": {
     "api/**.ts": {
-      "runtime": "edge",
-      "maxDuration": 5
+      "runtime": "nodejs18.x"
     }
   }
 }
