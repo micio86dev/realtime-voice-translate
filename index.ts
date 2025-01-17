@@ -23,6 +23,7 @@ interface SendMessageBody {
 }
 
 app.use(cors());
+app.get('/', () => 'Hello from Elysia')
 app.post('/send-message', async (ctx) => {
   const { channel, source_lang, target_lang, message } = ctx.body as SendMessageBody;
 
