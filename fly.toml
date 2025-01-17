@@ -1,0 +1,7 @@
+app = "realtime-voice-translate"
+
+[[services]]
+  internal_port = 3000
+  protocol = "http"
+  [services.ports]
+    http = "80"
