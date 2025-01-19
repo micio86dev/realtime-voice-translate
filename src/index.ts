@@ -8,6 +8,7 @@ const pusher = new Pusher({
   key: '27991ede2e5f0b8d86d9',
   secret: '7efe542d0a2afbabb3c4',
   cluster: 'eu',
+  useTLS: true,
 });
 
 const app = new Elysia();
@@ -22,8 +23,30 @@ interface SendMessageBody {
   message: string;
 }
 
+interface PusherAuthBody {
+  socket_id: string;
+  channel_name: string;
+  user_id: string;
+}
+
 app.use(cors());
+
 app.get('/', () => 'Hello from Elysia')
+
+app.post('/pusher/auth', (ctx) => {
+  const { socket_id, channel_name, user_id } = ctx.body as PusherAuthBody;
+  const user = {
+    user_id: user_id,
+    user_info: {
+      name: `User ${ user_id }`,
+    },
+  };
+
+  const auth = pusher.authorizeChannel(socket_id, channel_name, user);
+
+  return auth;
+});
+
 app.post('/send-message', async (ctx) => {
   const { channel, source_lang, target_lang, message } = ctx.body as SendMessageBody;
 
