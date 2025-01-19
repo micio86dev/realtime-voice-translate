@@ -9,6 +9,9 @@ internal_port = 3_000
 min_machines_running = 0
 processes = [ "app" ]
 
+[build]
+  builder = "heroku/buildpacks:20"
+
 [[vm]]
 cpu_kind = "shared"
 cpus = 1
